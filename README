@@ -1,0 +1,19 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4184
+
+Get the latest version from github: https://github.com/nthorne/vim-pybreak
+
+Pybreak is a python filetype plugin for easily toggling set_trace statements, making it more convenient to debug python scripts. The following python filetype keymappings are provided:
+
+* <localleader>d - inserts a set_trace statement after the cursor position if
+  no statements (as inserted by pybreak) are found on the current line. _If_,
+  however, any set_trace statements are found at the current line, they are
+  removed, and no further set_trace statements are inserted.
+* <localleader>D - as <localleader>d, with the minor difference that this
+  keymapping inserts the set_trace statement _at_ the cursor position.
+* <localleader>da - removes _all_ set_trace statements in the active buffer
+* <localleader>de - toggles set_trace (see <localleader>d), writes the
+  buffer to disk, and then executes the file with the python interpreter.
+
+If the script does not work, make sure that the file being edited is recognized as a python file (set ft? returning filetype=python).
+
+This script is released under the GNU General Public License v.3
